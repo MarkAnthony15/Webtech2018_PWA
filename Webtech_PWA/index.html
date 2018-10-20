@@ -37,22 +37,6 @@
 <body>
 
 <h1>Evacuation Area Finder</h1>
-<!--
-<div id="map" style="width:400px;height:400px;background:yellow"></div>
-
-<script>
-function myMap() {
-var mapOptions = {
-    center: new google.maps.LatLng(100, -0.12),
-    zoom: 10,
-    mapTypeId: google.maps.MapTypeId.HYBRID
-}
-var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-}
-</script>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
--->
 <div id="map"></div>
     <script>
       // Note: This example requires that you consent to location sharing when
@@ -61,6 +45,44 @@ var map = new google.maps.Map(document.getElementById("map"), mapOptions);
       // locate you.
       var map, infoWindow;
       function myMap() {
+/*
+   	addConnectivityListeners: function()
+		{
+		  var me = this;
+		 
+		  var onOnline = function(){
+ 
+		    //Wait for connection
+		    var task = Ext.create('Ext.util.DelayedTask', function(){
+		      if(typeof google == "undefined" || typeof google.maps == "undefined"){
+		          me.loadGoogleMaps(me);
+		      }
+		      else
+		      {
+		          if(!me.online){
+		              me.showMap();
+		              me.online = true;
+		          }
+		          me.enableMap();
+		      }
+		    });
+		 
+		    task.delay(2000);
+		 
+		};
+		 
+		  var onOffline = function()
+		  {
+		    console.log('offline');
+		    me.disableMap();
+		  };
+		 
+		  document.addEventListener("online", onOnline, false);
+		  document.addEventListener("offline", onOffline, false);
+		},
+
+
+ */
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: -34.397, lng: 150.644},
           zoom: 6
@@ -97,7 +119,7 @@ var map = new google.maps.Map(document.getElementById("map"), mapOptions);
       }
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKEXye4EvpiUjyPjtr5bnwmSTmMmnmQqA&callback=myMap">
     </script>
 </body>
 </html>
