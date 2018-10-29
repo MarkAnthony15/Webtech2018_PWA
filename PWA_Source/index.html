@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Evacuation Area Locator</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="manifest" href="manifest.json">
+      <link rel="icon"  href="images/icons/logo.jpg">
+
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta name="apple-mobile-web-app-title" content="EvacAreaLocator">
+      <link rel="apple-touch-icon" href="images/icons/logo.jpg">
+
+      <meta name="msapplication-TileImage" content="images/icons/logo.jpg">
+      <meta name="msapplication-TileColor" content="#2F3BA2">
+
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    
+  </head>
+  <body>
+      <div id="heading">
+        <p>Evacuation Center Finder <a href="javascript:location.reload(true)" ><img src="images/icons/download.jpg"></a> <br>
+      </div>
+        
+      </p>
+        <div id="map" height="460px" width="100%"></div>
+        <script src="scripts/db.js"></script>
+        <script type="text/javascript" src="scripts/automaticMarker.js"></script>
+        <script type="text/javascript" src="scripts/retrieveMarker.js"></script>
+        <!-- <script type="text/javascript" src="main.js"></script> -->
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKEXye4EvpiUjyPjtr5bnwmSTmMmnmQqA&callback=myMap">
+    </script>
+  </body>
+</html>
